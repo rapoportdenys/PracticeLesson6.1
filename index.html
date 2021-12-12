@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let string = 'LoRem ipsuM dOlor sIT ameTconsectetur sUck adiPisicing elIt. NumQuam, aut in? TemporA Fuck Velit, aliaS poRRo VENiam eius Quas, quOS nisi rem numquam, voluptaTE debitis fugit PARIATUR ut? VoluPtatum, Neque perspiciatis!';
+
+
+
+        function findWords(string) {
+            
+           string = string.split(' ');
+
+            let result = string.filter(function (item) {
+                item= item.toLowerCase();
+
+                if (item !== 'fuck' && item !== 'suck') {
+                    return item
+                }
+            })
+            return result.join(' ');
+        };
+
+        const result = findWords(string);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
